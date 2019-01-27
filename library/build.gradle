@@ -1,14 +1,8 @@
 apply plugin: 'com.android.library'
 
-dependencies {
-    compile 'com.google.android.gms:play-services-maps:11.0.4'
-}
-
 android {
-    compileSdkVersion 25
-
-    buildToolsVersion '25.0.2'
-
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     resourcePrefix 'amu_'
 
     defaultConfig {
@@ -41,4 +35,8 @@ if (System.getenv("JITPACK")) {
     apply plugin: 'maven'
 } else {
     apply from: '../gradle-mvn-push.gradle'
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
 }
